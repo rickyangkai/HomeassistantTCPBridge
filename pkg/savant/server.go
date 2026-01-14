@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/rick/homeassistant-tcp-bridge/pkg/config"
-	"github.com/rick/homeassistant-tcp-bridge/pkg/ha"
+	"github.com/rickyangkai/HomeassistantTCPBridge/pkg/config"
+	"github.com/rickyangkai/HomeassistantTCPBridge/pkg/ha"
 )
 
 type Server struct {

@@ -1,4 +1,4 @@
-module github.com/rick/homeassistant-tcp-bridge
+module github.com/rickyangkai/HomeassistantTCPBridge
 
 go 1.21
 
