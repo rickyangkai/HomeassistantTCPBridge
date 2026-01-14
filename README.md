@@ -1,49 +1,50 @@
-# Savant Home Assistant Proxy
+# Savant Home Assistant 代理
 
-This is a simple TCP proxy that allows your Savant system to communicate with Home Assistant.
+这是一个简单的 TCP 代理程序，允许您的 Savant 系统与 Home Assistant 进行通信。
 
-## Installation Instructions
+## 安装指南
 
-### Prerequisites
-1. **Home Assistant** installed and running.
-2. **Savant** system setup.
-3. Basic understanding of Home Assistant add-ons and Savant profiles.
+### 先决条件
+1. 已安装并运行 **Home Assistant**。
+2. 已设置 **Savant** 系统。
+3. 对 Home Assistant Add-on 和 Savant Profile 有基本的了解。
 
-### Step 1: Add the Add-on Repository to Home Assistant
-1. Open Home Assistant.
-2. Go to **Supervisor** > **Add-on Store**.
-3. Click the **three-dot menu** in the top right corner and select **Repositories**.
-4. Paste the repository URL:
-5. Click **Add**, then find and install the "Savant Home Assistant Proxy" add-on from the list.
+### 第一步：将 Add-on 仓库添加到 Home Assistant
+1. 打开 Home Assistant。
+2. 前往 **配置** > **加载项、备份与 Supervisor** > **加载项商店** (Supervisor > Add-on Store)。
+3. 点击右上角的 **三点菜单**，选择 **仓库** (Repositories)。
+4. 粘贴本仓库的 URL。
+5. 点击 **添加**，然后从列表中找到并安装 "Savant Home Assistant Proxy" 加载项。
 
-### Step 2: Configure the Add-on
-1. After installing the add-on, click **Start** to run it.
-2. Follow any configuration instructions provided within the add-on settings.
+### 第二步：配置 Add-on
+1. 安装加载项后，点击 **启动** (Start) 运行它。
+2. 按照加载项设置中提供的任何配置说明进行操作（例如配置白名单等）。
 
-### Step 3: Download and Import the Savant Profile
-1. Download the `hass_savant.xml` file from the repository:
-2. Import this profile into your Savant system’s blueprint:
-- Go to your Savant System’s **Blueprint Manager**.
-- Add the `Hass Savant` profile to your configuration.
+### 第三步：下载并导入 Savant Profile
+1. 从本仓库下载 `hass_savant.xml` 文件。
+2. 将此 Profile 导入到您的 Savant 系统蓝图 (Blueprint) 中：
+   - 打开您的 Savant 系统的 **Blueprint Manager**。
+   - 将 `Hass Savant` profile 添加到您的配置中。
 
-### Step 4: Configure the Ethernet Connection
-1. Set up the **Ethernet connection** between your Savant system and your network.
-2. In the **Savant profile settings**, specify the IP address of your Home Assistant instance so the two systems can communicate.
-- You can find your Home Assistant IP address in the **Supervisor** > **System** > **IP Address** section.
-- If connecting locally, you may be able to use homeassistant.local instead of the ip address.
+### 第四步：配置以太网连接
+1. 设置 Savant 系统与您网络的 **以太网连接**。
+2. 在 **Savant Profile 设置** 中，指定 Home Assistant 实例的 IP 地址，以便两个系统可以通信。
+   - 您可以在 Home Assistant 的 **设置** > **系统** > **网络** 部分找到 IP 地址。
+   - 如果是在局域网内连接，您可能可以使用 `homeassistant.local` 代替 IP 地址。
+   - **端口号** 默认为 `8080`。
 
-### Step 5: Add Devices and Entity IDs
-1. In the Savant system, go to the desired data tables where you want to integrate devices with Home Assistant.
-2. Add the appropriate devices and link them to Home Assistant entities.
+### 第五步：添加设备和实体 ID (Entity ID)
+1. 在 Savant 系统中，前往您希望集成 Home Assistant 设备的数据表。
+2. 添加相应的设备并将其链接到 Home Assistant 实体。
 
-#### Finding Entity IDs in Home Assistant:
-- Go to **Settings** > **Devices & Services** > **Entities** in Home Assistant.
-- Use the search function to locate the specific device entities you want to link with your Savant system.
-- Copy the **Entity ID** of the device (e.g., `light.living_room_lamp`) and add it to the corresponding location in the Savant system.
+#### 在 Home Assistant 中查找实体 ID：
+- 前往 Home Assistant 的 **配置** > **设备与服务** > **实体**。
+- 使用搜索功能找到您想要链接到 Savant 系统的特定设备实体。
+- 复制设备的 **实体 ID**（例如 `light.living_room_lamp`），并将其添加到 Savant 系统中的相应位置。
 
-### Step 6: Verify the Integration
-Once you have set up the Ethernet connection and added the entity IDs, test the system to ensure that your Savant system is communicating correctly with Home Assistant.
+### 第六步：验证集成
+一旦设置好以太网连接并添加了实体 ID，请测试系统以确保 Savant 系统能够正确地与 Home Assistant 通信。
 
 ---
 
-For more details and troubleshooting, please refer to the official documentation or open an issue in this repository.
+如需更多详细信息和故障排除，请参考官方文档或在本仓库中提交 Issue。
